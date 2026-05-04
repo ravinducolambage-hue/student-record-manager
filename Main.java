@@ -15,6 +15,8 @@ public class Main {
 
         countStudents();
 
+        updateStudent("Bob", "Charlie");
+
     }
 
     static void addStudent(String name) {
@@ -36,6 +38,16 @@ public class Main {
 
     static void countStudents() {
         System.out.println("Total students: " + students.size());
+    }
+
+    static void updateStudent(String oldName, String newName) {
+        int index = students.indexOf(oldName);
+        if (index != -1) {
+            students.set(index, newName);
+            System.out.println(oldName + " updated to " + newName + ".");
+        } else {
+            System.out.println(oldName + " not found.");
+        }
     }
 
 }
