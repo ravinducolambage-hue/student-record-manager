@@ -16,6 +16,7 @@ public class Main {
         countStudents();
 
         updateStudent("Bob", "Charlie");
+        searchStudent("Charlie");
 
     }
 
@@ -47,6 +48,14 @@ public class Main {
             System.out.println(oldName + " updated to " + newName + ".");
         } else {
             System.out.println(oldName + " not found.");
+        }
+    }
+
+    static void searchStudent(String name) {
+        if (students.contains(name)) {
+            System.out.println(name + " found.");
+        } else {
+            System.out.println(name + " not found.");
         }
     }
 
